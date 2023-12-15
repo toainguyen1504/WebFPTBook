@@ -1,0 +1,81 @@
+﻿<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>Category Manegement</h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item">
+                        <a href="#">Home</a>
+                    </li>
+                    <li class="breadcrumb-item active">List</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <!-- /.container-fluid -->
+</section>
+<!-- Main content -->
+<section class="content">
+    <!-- Default box -->
+    <div class="card">
+        <div class="row card-header">
+            <div class="col-7">
+                <h4>List All Category</h4>
+            </div>
+            <div class="col-5">
+                <a asp-action = "Create" asp-controller = "Category" class="btn btn-primary" style="
+                   float: inline-end;">
+                    Add New
+                </a>
+            </div>
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body">
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <table id="example1" class="table">
+                        <thead>
+                            <tr>
+                                <th>No.</th>
+                                <th>Name</th>
+                                <th>Description</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach(var category in Model)
+                            {
+                                var description = category.Description ?? "Default Description";
+                                <tr>
+                                    <td>@category.Id</td>
+                                    <td>@category.Title</td>
+                                    <td>@category.Description</td>
+                                    <td>
+                                        <a href="#" class="btn btn-warning">
+                                            Edit
+                                        </a>
+                                        <a href="#" class="btn btn-danger">
+                                            Delete
+                                        </a>
+                                       
+                                    </td>
+                                </tr>
+                            }
+                            
+
+                        </tbody>
+                        <tfoot>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- /.card-body -->
+    </div>
+    <!-- /.card -->
+</section>

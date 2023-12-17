@@ -40,29 +40,37 @@
                         <thead>
                             <tr>
                                 <th>No.</th>
+                                <th>Id</th>
                                 <th>Name</th>
                                 <th>Description</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
+                            @{
+                                var index = 1;
+                            }
                             @foreach(var category in Model)
                             {
-                                var description = category.Description ?? "Default Description";
                                 <tr>
-                                    <td>@category.Id</td>
+                                    <td>@index</td>
+                                    <th>@category.Id</th>
                                     <td>@category.Title</td>
                                     <td>@category.Description</td>
                                     <td>
-                                        <a href="#" class="btn btn-warning">
+                                        <a asp-action="Edit" asp-controller="Category" asp-route-Id="@category.Id" 
+                                        class="btn btn-warning">
                                             Edit
                                         </a>
-                                        <a href="#" class="btn btn-danger">
+                                        <a asp-action="Delete" asp-controller="Category" asp-route-Id="@category.Id"
+                                        class="btn btn-danger">
                                             Delete
                                         </a>
+
                                        
                                     </td>
                                 </tr>
+                                index++;
                             }
                             
 

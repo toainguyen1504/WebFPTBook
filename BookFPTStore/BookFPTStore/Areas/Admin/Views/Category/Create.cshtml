@@ -10,7 +10,7 @@
                     <li class="breadcrumb-item">
                         <a href="#">Home</a>
                     </li>
-                    <li class="breadcrumb-item active">List</li>
+                    <li class="breadcrumb-item active">Create</li>
                 </ol>
             </div>
         </div>
@@ -47,15 +47,16 @@
             </div>
 
         </form>
+        <div class="form-group">
+            <a asp-action="Index"> Back to List Category</a>
+        </div>
     </div>
 
-    <a asp-action="Index"> Back to List Category</a>
-  
     <!-- /.container-fluid -->
 </section>
 
-@*@section Scripts {
-    @{ 
-        @await Html.RenderPartialAsync("_ValidationScriptsPartial");
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
-}*@
+}

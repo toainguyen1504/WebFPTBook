@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace BookFPTStore.Models;
 
-public partial class FptbookstoreContext : DbContext
+public partial class FptbookstoreContext : IdentityDbContext<AppUserModel>
 {
     internal object TbCategory;
 
@@ -39,6 +41,7 @@ public partial class FptbookstoreContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+
         modelBuilder.Entity<TbAuthor>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("PK__tb_Autho__3213E83F22229D0B");
@@ -196,6 +199,14 @@ public partial class FptbookstoreContext : DbContext
         });
 
         OnModelCreatingPartial(modelBuilder);
+
+        base.OnModelCreating(modelBuilder);
+
+        // Cấu hình khóa chính cho IdentityUserLogin<string>
+        modelBuilder.Entity<IdentityUserLogin<string>>(b =>
+        {
+            b.HasKey(l => new { l.LoginProvider, l.ProviderKey });
+        });
     }
 
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);

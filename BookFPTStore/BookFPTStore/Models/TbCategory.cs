@@ -12,10 +12,12 @@ public partial class TbCategory
     [Key]
     public int Id { get; set; }
 
-    [Required, MinLength(4, ErrorMessage = "Please enter title!")]
+    [Required(ErrorMessage = "Please enter title!")]
+    [StringLength(30, ErrorMessage = "Title cannot exceed 30 characters.")]
     public string Title { get; set; } = null!;
 
-    [Required, MinLength(4, ErrorMessage = "Please enter description!")]
+    [Required(ErrorMessage = "Please enter description!")]
+    [StringLength(250, ErrorMessage = "Title cannot exceed 250 characters.")]
     public string? Description { get; set; } = "Default Description";
 
     public virtual ICollection<TbBook> TbBooks { get; set; } = new List<TbBook>();

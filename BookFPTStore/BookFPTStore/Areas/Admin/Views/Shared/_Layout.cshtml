@@ -1,5 +1,4 @@
-﻿
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -18,18 +17,39 @@
 
     <!-- Theme style -->
     <link rel="stylesheet" href="~/AdminAssets/dist/css/adminlte.min.css">
+    <style>
+        table .btn {
+            margin: 5px 0px;
+        }
+    </style>
 </head>
 <body class="hold-transition sidebar-mini">
     <!-- Site wrapper -->
+    
     <div class="wrapper">
         <!-- Navbar -->
+      
         @Html.Partial("_NavbarPartial")
         <!-- /.navbar -->
         <!-- Main Sidebar Container -->
         @Html.Partial("_SidebarPartial")
         <!-- Content Wrapper. Contains page content -->
-
+        
         <div class="content-wrapper">
+            @if (TempData["success"] != null)
+            {
+                <div class="alert alert-success notification">
+                    @TempData["success"]
+                </div>
+            }
+
+            @if (TempData["error"] != null)
+            {
+                <div class="alert alert-danger notification">
+                    @TempData["error"]
+                </div>
+            }
+
             <!-- Content Header (Page header) -->
             @RenderBody()
             <!-- /.content -->

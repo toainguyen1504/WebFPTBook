@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WaaX+eV8Ta4r8miPA4jZPPP8x8Vbswuqkxip7WTIw1idAEi1d2+LWcsJKPsAv+wEFmkwuuiPDbLxTgNPMJrJLg==",
+  "dgSpecHash": "s+7b39IzVnabpy1SjOdJUDMn8LSS2qgYrwJ4ZiPUYFhegmRG7DQ7th//qql0D5nJI4Qjd6GsX5zihSzkCaksIg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\toain\\OneDrive\\Desktop\\WebFPTBook\\BookFPTStore\\BookFPTStore\\BookFPTStore.csproj",
+  "projectFilePath": "C:\\Users\\toain\\Downloads\\WebFPTBook\\BookFPTStore\\BookFPTStore\\BookFPTStore.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\toain\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\toain\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
@@ -59,6 +59,7 @@
     "C:\\Users\\toain\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\7.0.14\\microsoft.aspnetcore.cryptography.internal.7.0.14.nupkg.sha512",
     "C:\\Users\\toain\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\7.0.14\\microsoft.aspnetcore.cryptography.keyderivation.7.0.14.nupkg.sha512",
     "C:\\Users\\toain\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\7.0.14\\microsoft.aspnetcore.identity.entityframeworkcore.7.0.14.nupkg.sha512",
+    "C:\\Users\\toain\\.nuget\\packages\\microsoft.aspnetcore.identity.ui\\7.0.12\\microsoft.aspnetcore.identity.ui.7.0.12.nupkg.sha512",
     "C:\\Users\\toain\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\6.0.11\\microsoft.aspnetcore.razor.language.6.0.11.nupkg.sha512",
     "C:\\Users\\toain\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
     "C:\\Users\\toain\\.nuget\\packages\\microsoft.build\\17.3.2\\microsoft.build.17.3.2.nupkg.sha512",
@@ -92,6 +93,8 @@
     "C:\\Users\\toain\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
     "C:\\Users\\toain\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\toain\\.nuget\\packages\\microsoft.extensions.dependencymodel\\7.0.0\\microsoft.extensions.dependencymodel.7.0.0.nupkg.sha512",
+    "C:\\Users\\toain\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\7.0.0\\microsoft.extensions.fileproviders.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\toain\\.nuget\\packages\\microsoft.extensions.fileproviders.embedded\\7.0.12\\microsoft.extensions.fileproviders.embedded.7.0.12.nupkg.sha512",
     "C:\\Users\\toain\\.nuget\\packages\\microsoft.extensions.identity.core\\7.0.14\\microsoft.extensions.identity.core.7.0.14.nupkg.sha512",
     "C:\\Users\\toain\\.nuget\\packages\\microsoft.extensions.identity.stores\\7.0.14\\microsoft.extensions.identity.stores.7.0.14.nupkg.sha512",
     "C:\\Users\\toain\\.nuget\\packages\\microsoft.extensions.logging\\7.0.0\\microsoft.extensions.logging.7.0.0.nupkg.sha512",

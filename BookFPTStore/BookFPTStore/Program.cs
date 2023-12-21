@@ -17,6 +17,8 @@ builder.Services.AddDbContext<FptbookstoreContext>(options =>
 builder.Services.AddIdentity<AppUserModel,IdentityRole>()
     .AddEntityFrameworkStores<FptbookstoreContext>().AddDefaultTokenProviders();
 
+/*builder.Services.ConfigureApplicationCookie(op => op.LoginPath = "/UserAuthentication/Login");*/
+
 builder.Services.Configure<IdentityOptions>(options =>
 {
     // Password settings.
@@ -28,9 +30,6 @@ builder.Services.Configure<IdentityOptions>(options =>
 
     options.User.RequireUniqueEmail = true;
 });
-
-
-
 
 var app = builder.Build();
 

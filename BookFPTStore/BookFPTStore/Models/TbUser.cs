@@ -24,7 +24,7 @@ public class TbUser
 
     public string? Phone { get; set; } = null;
 
-    public string Role { get; set; } = "1";
+	public int Role { get; set; } = 1;
 
-    public virtual ICollection<TbCart> TbCarts { get; set; } = new List<TbCart>();
+	public virtual ICollection<TbCart> TbCarts { get; set; } = new List<TbCart>();
 }

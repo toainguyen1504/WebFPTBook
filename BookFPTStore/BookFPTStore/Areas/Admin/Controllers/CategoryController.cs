@@ -9,8 +9,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Internal;
 namespace BookFPTStore.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Authorize]
-    public class CategoryController : Controller
+	[Authorize]
+
+	public class CategoryController : Controller
     {
 
         public readonly FptbookstoreContext _dataContext;
@@ -29,11 +30,7 @@ namespace BookFPTStore.Areas.Admin.Controllers
             var categories = _dataContext.TbCategories.ToList();
             return View(categories);
         }*/
-        public async Task<IActionResult> Edit(int Id)
-        {
-            TbCategory category = await _dataContext.TbCategories.FindAsync(Id);
-            return View(category);
-        }
+     
 
         public IActionResult Create(TbCategory category)
         {
@@ -47,6 +44,11 @@ namespace BookFPTStore.Areas.Admin.Controllers
             return View(category); 
         }
 
+        public async Task<IActionResult> Edit(int Id)
+        {
+            TbCategory category = await _dataContext.TbCategories.FindAsync(Id);
+            return View(category);
+        }
         public IActionResult Update(TbCategory category)
         {
             if (ModelState.IsValid)

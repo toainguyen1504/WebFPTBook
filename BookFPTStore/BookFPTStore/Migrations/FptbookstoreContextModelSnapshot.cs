@@ -64,6 +64,9 @@ namespace BookFPTStore.Migrations
                     b.Property<bool>("PhoneNumberConfirmed")
                         .HasColumnType("bit");
 
+                    b.Property<int>("Role")
+                        .HasColumnType("int");
+
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("nvarchar(max)");
 
@@ -330,10 +333,9 @@ namespace BookFPTStore.Migrations
                         .HasColumnType("varchar(12)")
                         .HasColumnName("phone");
 
-                    b.Property<string>("Role")
-                        .IsRequired()
+                    b.Property<int>("Role")
                         .HasMaxLength(15)
-                        .HasColumnType("nvarchar(15)")
+                        .HasColumnType("int")
                         .HasColumnName("role");
 
                     b.Property<string>("Username")

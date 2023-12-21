@@ -6,17 +6,18 @@ namespace BookFPTStore.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+		public readonly FptbookstoreContext _dataContext;
 
-        public HomeController(ILogger<HomeController> logger)
+		public HomeController(FptbookstoreContext context)
+		{
+			_dataContext = context;
+		}
+		public IActionResult Index()
         {
-            _logger = logger;
-        }
+			var categories = _dataContext.TbCategories.ToList();
+			return View(categories);
+		}
 
-        public IActionResult Index()
-        {
-            return View();
-        }
 
         public IActionResult Privacy()
         {
@@ -28,5 +29,6 @@ namespace BookFPTStore.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
-    }
+
+	}
 }

@@ -1,12 +1,12 @@
-﻿@model List<BookFPTStore.Models.TbCategory>
+﻿@*@model List<BookFPTStore.Models.TbCategory>*@
+@model BookFPTStore.Models.ViewClient
 <div class="left-sidebar">
     <h2>Category</h2>
     <div class="panel-group category-products" id="accordian">
         <!--category-productsr-->
-  
-        @if (Model != null && Model.Any())
+        @if (Model.Categories != null && Model.Categories.Any())
         {
-            foreach (var category in Model)
+            foreach (var category in Model.Categories)
             {
                 <div class="panel panel-default">
                     <div class="panel-heading">

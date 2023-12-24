@@ -1,5 +1,6 @@
 ﻿using BookFPTStore.Models;
-using BookFPTStore.Models.ViewModels;
+/*using BookFPTStore.Models.ViewModels;*/
+/*using BookFPTStore.Models.ViewModels;*/
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Data;
@@ -20,58 +21,13 @@ namespace BookFPTStore.Controllers
 		}
 		public IActionResult Login(string returnUrl)
 		{
-
-			return View(new LoginViewModel { ReturnUrl = returnUrl });
+			
+			return View(new ViewClient { ReturnUrl = returnUrl });
 		}
 
 		[HttpPost]
 
-		/*	public async Task<IActionResult> Login(LoginViewModel loginVM)
-			{
-				var user = await _userManager.FindByNameAsync(loginVM.Username);
-				loginVM.UserRoleId = user?.GetRole();
-				if (loginVM.UserRoleId.HasValue)
-				{
-					if (loginVM.UserRoleId == 0)
-					{
-						if (ModelState.IsValid)
-						{
-
-							Microsoft.AspNetCore.Identity.SignInResult result = await _signInManager.PasswordSignInAsync(loginVM.Username, loginVM.Password, false, false);
-
-							if (result.Succeeded)
-							{
-								return Redirect("amin");
-							}
-							ModelState.AddModelError("", "Invalid Username or Password");
-						}
-
-						// Nếu UserRoleId là 0, đây có thể là admin
-						ViewBag.RoleDescription = "Admin";
-					}
-					else
-					{
-						if (ModelState.IsValid)
-						{
-
-							Microsoft.AspNetCore.Identity.SignInResult result = await _signInManager.PasswordSignInAsync(loginVM.Username, loginVM.Password, false, false);
-
-							if (result.Succeeded)
-							{
-								return Redirect(loginVM.ReturnUrl ?? "/");
-							}
-							ModelState.AddModelError("", "Invalid Username or Password");
-						}
-						// Xử lý cho các giá trị khác của UserRoleId
-						ViewBag.RoleDescription = "Other Role";
-					}
-				}
-
-
-				return View(loginVM);
-			}*/
-
-		public async Task<IActionResult> Login(LoginViewModel loginVM)
+		public async Task<IActionResult> Login(ViewClient loginVM)
 		{
 
 

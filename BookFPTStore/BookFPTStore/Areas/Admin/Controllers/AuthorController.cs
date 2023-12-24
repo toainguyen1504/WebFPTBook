@@ -1,91 +1,71 @@
 ﻿using BookFPTStore.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 
 namespace BookFPTStore.Areas.Admin.Controllers
 {
-    [Area("Admin")]
-    public class AuthorController : Controller
-    {
-        public readonly FptbookstoreContext _dataContext;
+	[Area("Admin")]
+	[Authorize]
+	public class AuthorController : Controller
+	{
+		public readonly FptbookstoreContext _dataContext;
 
-        public AuthorController(FptbookstoreContext context)
-        {
-            _dataContext = context;
-        }
-        public IActionResult Index()
-        {
-            var authors = _dataContext.TbAuthors.ToList();
-            return View(authors);
-        }
-        public IActionResult Create(TbAuthor author)
-        {
-            if (ModelState.IsValid)
-            {
-                _dataContext.TbAuthors.Add(author);
-                _dataContext.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            return View(author); 
-        }
+		public AuthorController(FptbookstoreContext context)
+		{
+			_dataContext = context;
+		}
+		public IActionResult Index()
+		{
+			var authors = _dataContext.TbAuthors.ToList();
+			return View(authors);
+		}
+		public IActionResult Create()
+		{
 
-        public async Task<IActionResult> Delete(int Id)
-        {
-            TbAuthor author = await _dataContext.TbAuthors.FindAsync(Id);
-            _dataContext.TbAuthors.Remove(author);
-            await _dataContext.SaveChangesAsync();
-            TempData["success"] = "Delete Successful!";
+			return View();
+		}
+		[HttpPost]
+		public IActionResult Create(TbAuthor author)
+		{
+			if (ModelState.IsValid)
+			{
+				_dataContext.TbAuthors.Add(author);
+				TempData["success"] = "Add Author Sucessfully!";
+				_dataContext.SaveChanges();
+				return RedirectToAction("Index");
+			}
+			return View(author);
+		}
 
-            return RedirectToAction("Index");
-        }
-        public IActionResult Edit(int id)
-        {
-            TbAuthor author = _dataContext.TbAuthors.Find(id);
+		public async Task<IActionResult> Delete(int Id)
+		{
+			TbAuthor author = await _dataContext.TbAuthors.FindAsync(Id);
+			_dataContext.TbAuthors.Remove(author);
+			await _dataContext.SaveChangesAsync();
+			TempData["success"] = "Delete Successful!";
 
-            if (author == null)
-            {
-                return NotFound(); // Handle the case where the author is not found
-            }
+			return RedirectToAction("Index");
+		}
+		public async Task<IActionResult> Edit(int Id)
+		{
+			TbAuthor author = await _dataContext.TbAuthors.FindAsync(Id);
+			return View(author);
+		}
 
-            return View(author);
-        }
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        
-         public IActionResult Edit(int id, [Bind("Id,Name,AddressEmail")] TbAuthor model)
-        {
-            if (id != model.Id)
-            {
-                return NotFound(); // Handle the case where the provided id doesn't match the model id
-            }
+		[HttpPost]
 
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    TbAuthor existingAuthor = _dataContext.TbAuthors.Find(id);
-
-                    if (existingAuthor == null)
-                    {
-                        return NotFound(); // Handle the case where the author is not found
-                    }
-
-                    // Update the fields of the existing author
-                    existingAuthor.Name = model.Name;
-                    // Update other fields as needed
-
-                    _dataContext.SaveChanges();
-                    TempData["success"] = "Edit Successful!";
-                    return RedirectToAction("Index");
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    // Handle concurrency issues if necessary
-                    throw;
-                }
-            }
-
-            return View(model);
-        }
-    }
+		public IActionResult Edit(TbAuthor author)
+		{
+			if (ModelState.IsValid)
+			{
+				_dataContext.TbAuthors.Update(author);
+				TempData["success"] = "Update author Sucessfully!";
+				_dataContext.SaveChanges();
+				return RedirectToAction("Index");
+			}
+			return View(author);
+		}
+	}
 }

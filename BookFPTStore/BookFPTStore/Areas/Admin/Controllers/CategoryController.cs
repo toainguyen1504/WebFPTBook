@@ -9,9 +9,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Internal;
 namespace BookFPTStore.Areas.Admin.Controllers
 {
     [Area("Admin")]
-	[Authorize]
+    [Authorize]
 
-	public class CategoryController : Controller
+    public class CategoryController : Controller
     {
 
         public readonly FptbookstoreContext _dataContext;

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using BookFPTStore.Models;
 
 namespace BookFPTStore.Models;
 
@@ -33,8 +34,9 @@ public partial class FptbookstoreContext : IdentityDbContext<AppUserModel>
     public virtual DbSet<TbUser> TbUsers { get; set; }
     public object Category { get; internal set; }
     public IEnumerable Categories { get; internal set; }
+	public List<TbAuthor> Authors { get; internal set; }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+	protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
 
     }
@@ -210,4 +212,5 @@ public partial class FptbookstoreContext : IdentityDbContext<AppUserModel>
     }
 
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+
 }

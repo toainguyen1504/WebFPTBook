@@ -8253,8 +8253,16 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\toain\\Downloads\\WebFPTBook\\BookFPTStore\\BookFPTStore\\wwwroot\\images\\book-store-logo.jpg",
+      "PackagePath": "staticwebassets\\images\\book-store-logo.jpg"
+    },
+    {
       "Id": "C:\\Users\\toain\\Downloads\\WebFPTBook\\BookFPTStore\\BookFPTStore\\wwwroot\\images\\gallery1.jpg",
       "PackagePath": "staticwebassets\\images\\gallery1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\toain\\Downloads\\WebFPTBook\\BookFPTStore\\BookFPTStore\\wwwroot\\images\\image1.jpg",
+      "PackagePath": "staticwebassets\\images\\image1.jpg"
     },
     {
       "Id": "C:\\Users\\toain\\Downloads\\WebFPTBook\\BookFPTStore\\BookFPTStore\\wwwroot\\js\\bootstrap.min.js",
@@ -8519,6 +8527,30 @@
     {
       "Id": "C:\\Users\\toain\\Downloads\\WebFPTBook\\BookFPTStore\\BookFPTStore\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\toain\\Downloads\\WebFPTBook\\BookFPTStore\\BookFPTStore\\wwwroot\\media\\books\\073401ed-f556-418b-8e3f-6035fe3c8865_2.jpg",
+      "PackagePath": "staticwebassets\\media\\books\\073401ed-f556-418b-8e3f-6035fe3c8865_2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\toain\\Downloads\\WebFPTBook\\BookFPTStore\\BookFPTStore\\wwwroot\\media\\books\\3982c934-8239-41be-a2ca-febbd324f4c8_image2.jpg",
+      "PackagePath": "staticwebassets\\media\\books\\3982c934-8239-41be-a2ca-febbd324f4c8_image2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\toain\\Downloads\\WebFPTBook\\BookFPTStore\\BookFPTStore\\wwwroot\\media\\books\\a5a30622-7e5b-43f4-b8b5-ab92c8a95208_image1.jpg",
+      "PackagePath": "staticwebassets\\media\\books\\a5a30622-7e5b-43f4-b8b5-ab92c8a95208_image1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\toain\\Downloads\\WebFPTBook\\BookFPTStore\\BookFPTStore\\wwwroot\\media\\books\\aef17847-30f6-4c41-b7a5-9d71c5b48238_truyenkieu.jpg",
+      "PackagePath": "staticwebassets\\media\\books\\aef17847-30f6-4c41-b7a5-9d71c5b48238_truyenkieu.jpg"
+    },
+    {
+      "Id": "C:\\Users\\toain\\Downloads\\WebFPTBook\\BookFPTStore\\BookFPTStore\\wwwroot\\media\\books\\af3bf8e9-055d-4b89-aecf-8573a28dcd85_1.jpg",
+      "PackagePath": "staticwebassets\\media\\books\\af3bf8e9-055d-4b89-aecf-8573a28dcd85_1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\toain\\Downloads\\WebFPTBook\\BookFPTStore\\BookFPTStore\\wwwroot\\media\\books\\c0b0ba96-a136-4068-ad8f-4cc4680a1200_3.jpg",
+      "PackagePath": "staticwebassets\\media\\books\\c0b0ba96-a136-4068-ad8f-4cc4680a1200_3.jpg"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.BookFPTStore.Microsoft.AspNetCore.StaticWebAssets.props",

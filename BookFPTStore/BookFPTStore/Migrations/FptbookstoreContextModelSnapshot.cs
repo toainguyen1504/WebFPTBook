@@ -111,7 +111,6 @@ namespace BookFPTStore.Migrations
                         .HasColumnName("email");
 
                     b.Property<string>("Name")
-                        .IsRequired()
                         .HasMaxLength(30)
                         .HasColumnType("nvarchar(30)")
                         .HasColumnName("name");
@@ -132,14 +131,17 @@ namespace BookFPTStore.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<int?>("AuthorId")
+                        .IsRequired()
                         .HasColumnType("int")
                         .HasColumnName("authorId");
 
                     b.Property<int?>("CategoryId")
+                        .IsRequired()
                         .HasColumnType("int")
                         .HasColumnName("categoryId");
 
                     b.Property<string>("Description")
+                        .IsRequired()
                         .HasMaxLength(4000)
                         .HasColumnType("nvarchar(4000)")
                         .HasColumnName("description");
@@ -158,10 +160,12 @@ namespace BookFPTStore.Migrations
                         .HasColumnName("price");
 
                     b.Property<decimal?>("PriceSale")
+                        .IsRequired()
                         .HasColumnType("decimal(18, 2)")
                         .HasColumnName("priceSale");
 
                     b.Property<int?>("Quantity")
+                        .IsRequired()
                         .HasColumnType("int")
                         .HasColumnName("quantity");
 
@@ -196,7 +200,6 @@ namespace BookFPTStore.Migrations
                         .HasColumnName("address");
 
                     b.Property<string>("Code")
-                        .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)")
                         .HasColumnName("code");
@@ -488,11 +491,15 @@ namespace BookFPTStore.Migrations
                     b.HasOne("BookFPTStore.Models.TbAuthor", "Author")
                         .WithMany("TbBooks")
                         .HasForeignKey("AuthorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired()
                         .HasConstraintName("FK_authorId");
 
                     b.HasOne("BookFPTStore.Models.TbCategory", "Category")
                         .WithMany("TbBooks")
                         .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired()
                         .HasConstraintName("FK_categoryId");
 
                     b.Navigation("Author");

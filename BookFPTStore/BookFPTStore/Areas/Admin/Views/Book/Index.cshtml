@@ -1,0 +1,104 @@
+﻿@model IEnumerable<TbBook>
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>Book Manegement</h1>
+
+
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item">
+                        <a href="#">Home</a>
+                    </li>
+                    <li class="breadcrumb-item active">List</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <!-- /.container-fluid -->
+</section>
+<!-- Main content -->
+<section class="content">
+    <!-- Default box -->
+    <div class="card">
+        <div class="row card-header">
+            <div class="col-7">
+                <h4>List All book</h4>
+            </div>
+            <div class="col-5">
+                <a asp-action="Create" asp-controller="Book" class="btn btn-primary" style="
+                   float: inline-end;">
+                    Add New
+                </a>
+            </div>
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body">
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <table id="example1" class="table">
+                        <thead>
+                            <tr>
+                                <th>No.</th>
+                                <th>Id</th>
+                                <th>Title</th>
+                                <th>Description</th>
+                                <th>Image</th>
+                                <th>Price</th>
+                                <th>PriceSale</th>
+                                <th>Quantity</th>
+                                <th>Author ID</th>
+                                <th>Category ID</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @{
+                                var index = 1;
+                            }
+                            @foreach (var book in Model)
+                            {
+                                <tr>
+                                    <td>@index</td>
+                                    <th>@book.Id</th>
+                                    <td>@book.Title</td>
+                                    <td>@book.Description</td>
+                               
+                                    <td>@book.Image</td>
+                                    <td>@book.Price</td>
+                                    <td>@book.PriceSale</td>
+                                    <td>@book.Quantity</td>
+                                    <td>@book.AuthorId</td>
+                                    <td>@book.CategoryId</td>
+                                    <td>
+                                        <a asp-action="Edit" asp-controller="Book" asp-route-Id="@book.Id"
+                                           class="btn btn-warning">
+                                            Edit
+                                        </a>
+                                        <a asp-action="Delete" asp-controller="Book" asp-route-Id="@book.Id"
+                                           class="btn btn-danger">
+                                            Delete
+                                        </a>
+
+                                    </td>
+                                </tr>
+                                index++;
+                            }
+
+
+                        </tbody>
+                        <tfoot>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- /.card-body -->
+    </div>
+    <!-- /.card -->
+</section>

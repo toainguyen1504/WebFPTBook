@@ -775,3 +775,5 @@ C:\Users\toain\Downloads\WebFPTBook\BookFPTStore\BookFPTStore\obj\Debug\net7.0\r
 C:\Users\toain\Downloads\WebFPTBook\BookFPTStore\BookFPTStore\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.UI.dll
 C:\Users\toain\Downloads\WebFPTBook\BookFPTStore\BookFPTStore\bin\Debug\net7.0\Microsoft.Extensions.FileProviders.Embedded.dll
 C:\Users\toain\Downloads\WebFPTBook\BookFPTStore\BookFPTStore\obj\Debug\net7.0\BookFPTStore.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\toain\Downloads\WebFPTBook\BookFPTStore\BookFPTStore\bin\Debug\net7.0\xunit.abstractions.dll
+C:\Users\toain\Downloads\WebFPTBook\BookFPTStore\BookFPTStore\bin\Debug\net7.0\xunit.core.dll

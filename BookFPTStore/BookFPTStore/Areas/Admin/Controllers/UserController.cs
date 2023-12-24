@@ -37,7 +37,7 @@ namespace BookFPTStore.Areas.Admin.Controllers
 		{
 			if (ModelState.IsValid)
 			{
-				AppUserModel newUser = new AppUserModel { UserName = user.Username, Email = user.Email , Role = user.Role };
+				AppUserModel newUser = new AppUserModel { UserName = user.Username, Email = user.Email };
 				IdentityResult result = await _userManager.CreateAsync(newUser, user.Password);
 				if (result.Succeeded)
 				{
@@ -50,6 +50,12 @@ namespace BookFPTStore.Areas.Admin.Controllers
 				}
 			}
 			return View(user);
+		}
+
+		public async Task<IActionResult> Delete(int Id)
+		{
+
+			return RedirectToAction("Index");
 		}
 
 	}

@@ -14,12 +14,25 @@ namespace BookFPTStore.Controllers
 		}
 		public IActionResult Index()
         {
-			var categories = _dataContext.TbCategories.ToList();
-			return View(categories);
+		
+			var data = new ViewClient
+            {
+                Books = _dataContext.TbBooks.ToList(),
+                Categories = _dataContext.TbCategories.ToList(),
+				Authors = _dataContext.TbAuthors.ToList()
+			};
+
+			return View(data);
 		}
 
+		/*public IActionResult AuthorView()
+		{
+			var authors = _dataContext.TbAuthors.ToList();
+			return View(authors);
+		}*/
 
-        public IActionResult Privacy()
+
+		public IActionResult Privacy()
         {
             return View();
         }

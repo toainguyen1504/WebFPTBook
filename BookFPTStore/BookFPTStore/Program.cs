@@ -49,18 +49,10 @@ app.MapControllerRoute(
     name: "Areas",
     pattern: "{area:exists}/{controller=Category}/{action=Index}/{id?}");
 
-/*app.MapControllerRoute(
-    name: "Areas",
-    pattern: "{area:exists}/{controller=Book}/{action=Index}/{id?}");*/
-
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
-/*app.MapControllerRoute(
-    name: "account",
-    pattern: "/account/{slug?}",
-    defaults: "{controller=Home}/{action=Index}/{id?}");*/
 
 
 app.Run();

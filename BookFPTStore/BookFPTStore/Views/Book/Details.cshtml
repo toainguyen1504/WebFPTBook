@@ -1,6 +1,70 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-Product Details
-@{
+﻿@model BookFPTStore.Models.ViewClient
+@section Css {
+    <style>
+        /*#design .productinfo img {
+                    height: 320px;
+                    object-fit: cover;
+                }*/
+    </style>
+   }
+<div class="col-sm-3">
+    @Html.Partial("_SidebarPartial")
+</div>
+@if (Model.Book is TbBook)
+{
+    var book = Model.Book as TbBook;
+    var category = Model.Category as TbCategory;
+    <div class="col-sm-9 padding-right">
+        <div class="product-details">
+            <!--product-details-->
+            <div class="col-sm-5">
+                <div class="view-product">
+                    <img src="~/media/books/@book.Image" alt="">
+                    <h3>NEW</h3>
+                </div>
+                <div id="similar-product" class="carousel slide" data-ride="carousel">
+
+                    <!-- Controls -->
+                    <a class="left item-control" href="#similar-product" data-slide="prev">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a class="right item-control" href="#similar-product" data-slide="next">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                </div>
+
+            </div>
+            <div class="col-sm-7">
+                <div class="product-information">
+                    <!--/product-information-->
+                    @*    <img src="~/media/books/@book.Image" class="newarrival" alt="">*@
+                    <h2>@book.Title</h2>
+                    <p>Web ID: 1089772</p>
+                    @*   <img src="images/product-details/rating.png" alt="">*@
+                    <span>
+                        <span>US $@book.Price</span>
+                        <label>Quantity:</label>
+                        <input type="text" value="@book.Quantity">
+                        <button type="button" class="btn btn-fefault cart">
+                            <i class="fa fa-shopping-cart"></i>
+                            Add to cart
+                        </button>
+                    </span>
+                    <p><b>Availability:</b> In Stock</p>
+                    <p><b>Condition:</b> New</p>
+                    <p><b>Category:</b> @book.Category.Title</p>
+                    <p><b>Author:</b> @book.Author.Name</p>
+                    <a href=""><img src="images/product-details/share.png" class="share img-responsive" alt=""></a>
+
+
+
+                </div><!--/product-information-->
+            </div>
+        </div><!--/product-details-->
+
+    </div>
+}
+else
+{
+    <p>Invalid book data</p>
 }

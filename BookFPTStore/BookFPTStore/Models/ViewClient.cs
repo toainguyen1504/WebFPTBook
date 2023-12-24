@@ -19,5 +19,8 @@ namespace BookFPTStore.Models
 		public List<TbCategory> Categories { get; set; }
 		public List<TbAuthor> Authors { get; set; }
 		public List<TbBook> Books { get; internal set; }
-	}
+		public object Book { get; internal set; }
+        public object Category { get; internal set; }
+        public object Author { get; internal set; }
+    }
 }

@@ -9,12 +9,16 @@
   <ItemGroup>
     <Compile Remove="Areas\Admin\Data\**" />
     <Compile Remove="Areas\Admin\Models\**" />
+    <Compile Remove="media\**" />
     <Content Remove="Areas\Admin\Data\**" />
     <Content Remove="Areas\Admin\Models\**" />
+    <Content Remove="media\**" />
     <EmbeddedResource Remove="Areas\Admin\Data\**" />
     <EmbeddedResource Remove="Areas\Admin\Models\**" />
+    <EmbeddedResource Remove="media\**" />
     <None Remove="Areas\Admin\Data\**" />
     <None Remove="Areas\Admin\Models\**" />
+    <None Remove="media\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -2090,7 +2094,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="media\books\" />
     <Folder Include="Migrations\" />
     <Folder Include="wwwroot\media\books\" />
   </ItemGroup>

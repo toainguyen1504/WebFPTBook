@@ -11695,11 +11695,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\toain\\Downloads\\WebFPTBook\\BookFPTStore\\BookFPTStore\\BookFPTStore.csproj",
+      "projectUniqueName": "C:\\Users\\toain\\OneDrive\\Desktop\\Demo\\WebFPTBook\\BookFPTStore\\BookFPTStore\\BookFPTStore.csproj",
       "projectName": "BookFPTStore",
-      "projectPath": "C:\\Users\\toain\\Downloads\\WebFPTBook\\BookFPTStore\\BookFPTStore\\BookFPTStore.csproj",
+      "projectPath": "C:\\Users\\toain\\OneDrive\\Desktop\\Demo\\WebFPTBook\\BookFPTStore\\BookFPTStore\\BookFPTStore.csproj",
       "packagesPath": "C:\\Users\\toain\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\toain\\Downloads\\WebFPTBook\\BookFPTStore\\BookFPTStore\\obj\\",
+      "outputPath": "C:\\Users\\toain\\OneDrive\\Desktop\\Demo\\WebFPTBook\\BookFPTStore\\BookFPTStore\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PwIvgWm4ACZMqNT5EXLfCnItu1GELmTZTWrpwa3g9yLCBllhSc7zA5y0Yx+UZ2SZoleukVE8x6JVaX0XvB4VSw==",
+  "dgSpecHash": "cKPtgmuPHYuJmRdPBPzAToi3SrZX1gLBuHt48CRmQZf1gBPV1PfefzPWVfHVyF2EDbvPYQGlbMaQIkjiib6B5g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\toain\\Downloads\\WebFPTBook\\BookFPTStore\\BookFPTStore\\BookFPTStore.csproj",
+  "projectFilePath": "C:\\Users\\toain\\OneDrive\\Desktop\\Demo\\WebFPTBook\\BookFPTStore\\BookFPTStore\\BookFPTStore.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\toain\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\toain\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
